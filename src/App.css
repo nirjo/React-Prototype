@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+/*userlist*/
+
+.list-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.list-item {
+  margin-bottom: 10px;
+}
+
+.create-user-button {
+  margin-top: 20px;
+}
+
+/*userDetails*/
+.container {
+  display: flex;
+
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.details-card {
+  margin-top: 20px;
+}
+
+.form{
+  display: flex;
+}
