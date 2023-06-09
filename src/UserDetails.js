@@ -9,6 +9,8 @@ import {
   Checkbox,
   Select,
   Option,
+  CardHeader,
+  CardBody,
   Avatar,
   Button,
   List,
@@ -25,6 +27,8 @@ import {
 } from "./redux/usersSlice";
 
 import PostDetails from "./PostDetails";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+
 function UserDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -84,8 +88,19 @@ function UserDetails() {
           </div>
           <div className="block w-full overflow-x-auto">
             {user !== null && (
+              
               <div>
-                <h1 className="text-2xl font-bold">{user.name}'s Details</h1>
+              <Card className="flex-row w-full max-w-[48rem]">
+
+              <CardHeader shadow={false} floated={false} className="w-2/5 shrink-0 m-0 rounded-r-none">
+        <img 
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" 
+          alt="image" 
+          className="w-full h-full object-cover"
+        />
+      </CardHeader>
+              <CardBody>
+              <h1 className="text-2xl font-bold">{user.name}'s Details</h1>
                 <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <h2 className="text-lg font-bold">User Information</h2>
                   <Avatar
@@ -111,6 +126,41 @@ function UserDetails() {
                     />
                   </p>
                 </div>
+        <a href="#" className="inline-block">
+          <Button variant="text" className="flex items-center gap-2">
+            Learn More 
+            <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
+          </Button>
+        </a>
+      </CardBody>
+      </Card>
+
+                {/* <h1 className="text-2xl font-bold">{user.name}'s Details</h1>
+                <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                  <h2 className="text-lg font-bold">User Information</h2>
+                  <Avatar
+                    variant="circular"
+                    alt="user 3"
+                    className="border-2 border-white hover:z-10 focus:z-10"
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80"
+                  />
+                  <p>
+                    {" "}
+                    <strong>Email:</strong> {user.email}
+                  </p>
+                  <p>
+                    <strong>Status:</strong>
+                    <Chip
+                      variant="ghost"
+                      color="green"
+                      size="sm"
+                      value={user.status}
+                      icon={
+                        <span className="content-[''] block w-2 h-2 rounded-full mx-auto mt-1 bg-green-900" />
+                      }
+                    />
+                  </p>
+                </div> */}
                 <Typography variant="h2" color="amber">
                   Posts
                 </Typography>
