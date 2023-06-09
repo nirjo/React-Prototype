@@ -9,6 +9,7 @@ import {
   Checkbox,
   Select,
   Option,
+  Avatar,
   Button,
   List,
   ListItem,
@@ -22,6 +23,7 @@ import {
   fetchPostsByUserId,
   postPost,
 } from "./redux/usersSlice";
+
 import PostDetails from "./PostDetails";
 function UserDetails() {
   const { id } = useParams();
@@ -86,7 +88,12 @@ function UserDetails() {
                 <h1 className="text-2xl font-bold">{user.name}'s Details</h1>
                 <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <h2 className="text-lg font-bold">User Information</h2>
-
+                  <Avatar
+                    variant="circular"
+                    alt="user 3"
+                    className="border-2 border-white hover:z-10 focus:z-10"
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1288&q=80"
+                  />
                   <p>
                     {" "}
                     <strong>Email:</strong> {user.email}
