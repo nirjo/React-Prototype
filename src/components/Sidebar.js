@@ -4,8 +4,21 @@ import { useDispatch, useSelector } from "react-redux";
 
 import NotificationDropdown from "./NotificationDropdown.js";
 import UserDropdown from "./UserDropdown.js";
-import { Typography } from "@material-tailwind/react";
-
+import {
+  List,
+  ListItem,
+  ListItemPrefix,
+  Chip,
+  Typography,
+} from "@material-tailwind/react";
+import {
+  PresentationChartBarIcon,
+  ShoppingBagIcon,
+  UserCircleIcon,
+  Cog6ToothIcon,
+  InboxIcon,
+  PowerIcon,
+} from "@heroicons/react/24/solid";
 
 export default function Sidebar() {
   const posts = useSelector((state) => state.users.posts);
@@ -28,6 +41,12 @@ export default function Sidebar() {
             className="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
+            <ListItem>
+              <ListItemPrefix>
+                <PresentationChartBarIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Dashboard
+            </ListItem>
             <Typography variant="h6" color="gray">
               {" "}
               REACT-TAILWIND PROJECT
