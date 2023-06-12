@@ -18,8 +18,7 @@ function App() {
 
           <Route path="/" element={<UserList />} />
           <Route path="/users/:id" element={<UserDetails />} />
-          <Route exact path="/posts/:postId" element={<PostDetails />} />
-
+          <Route exact path="/posts/:postId" element={<PostDetails />} /> 
           <Route>404 Not Found!</Route>
         </Routes>
       </Router>

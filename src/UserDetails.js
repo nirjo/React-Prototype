@@ -22,7 +22,8 @@ import {
 
 import PostDetails from "./PostDetails";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-
+import { CommentSection } from "react-comments-section";
+import CommentSection1 from "./components/CommentSection1";
 function UserDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -231,7 +232,8 @@ function UserDetails() {
             </div>
           </div>
           <div className="block w-full overflow-x-auto">
-            <PostDetails />
+            {/* <PostDetails /> */}
+            <CommentSection1 />
           </div>
         </div>
       </div>

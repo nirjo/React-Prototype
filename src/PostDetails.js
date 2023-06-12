@@ -4,6 +4,7 @@ import { fetchPostById } from "./redux/usersSlice";
 import { useDispatch, useSelector } from "react-redux";
 // import { Container, Card, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import CommentSection1 from "./components/CommentSection1";
 import {
   //fetchUserById,
   //fetchPostsByUserId,
@@ -73,13 +74,14 @@ function PostDetails() {
       <Typography variant="h2" color="blue">
         Posts
       </Typography>
-      {post !== null && (
+      <CommentSection1 />
+      {/* {post !== null && (
         <div>
           <Card color="transparent" shadow={false}>
             <List className="border rounded p-4 mb-4">
               {/* <Link to={`/posts/${post.id}`}><strong>Title:</strong> {post.title}</Link> */}
 
-              <ListItemPrefix>
+              {/* <ListItemPrefix>
                 <strong>Title:</strong>
                 {post.title}
               </ListItemPrefix>
@@ -91,13 +93,13 @@ function PostDetails() {
                 {post.body}
               </ListItemPrefix>
             </List>
-          </Card>
+          </Card> */}
           {/* <Card className="mb-4">
             <Card.Body>
               <Card.Text>{post.body}</Card.Text>
             </Card.Body>
           </Card> */}
-          <Typography variant="h1" color="blue">
+          {/* <Typography variant="h1" color="blue">
             Comments{" "}
           </Typography>
           <Card className="mb-4">
@@ -153,7 +155,7 @@ function PostDetails() {
             </form>
           </Card>
         </div>
-      )}
+      )} */} 
     </div>
   );
 }
